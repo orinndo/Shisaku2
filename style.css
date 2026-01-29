@@ -1,0 +1,179 @@
+/* style.css */
+
+/* 1. 基本設定・カラー変数 */
+:root {
+    --primary-color: #0056b3; /* 医療向け：信頼感のあるブルー */
+    --accent-color: #e3f2fd;  /* 背景用：薄いブルー */
+    --text-main: #333333;
+    --text-sub: #666666;
+    --bg-color: #f4f7f6;      /* 画面全体の背景 */
+    --white: #ffffff;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%; /* iPhoneでの文字サイズ自動調整防止 */
+}
+
+/* 2. ヘッダー */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+/* 3. コンテナ（中央寄せ） */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+/* 4. メインメニュー（index.html用） */
+.menu-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.menu-card {
+    background: var(--white);
+    padding: 18px var(--spacing-lg);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-main);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+    border-left: 6px solid var(--primary-color);
+}
+
+.menu-card:active {
+    background-color: var(--accent-color);
+}
+
+.step-num {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-right: var(--spacing-md);
+    min-width: 35px;
+}
+
+.step-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.step-title small {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-sub);
+    margin-top: 2px;
+}
+
+/* 5. 再生プレイヤーエリア（各セクション用） */
+.player-area {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.play-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.3);
+}
+
+.play-btn:active {
+    transform: translateY(2px);
+}
+
+.play-icon {
+    margin-right: 12px;
+    font-size: 1.4rem;
+}
+
+/* 6. スクリプト表示リスト */
+.script-list {
+    margin-top: 10px;
+}
+
+.script-item {
+    background: var(--white);
+    margin-bottom: 12px;
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.script-no {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.text-jp {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+    color: #000;
+}
+
+.text-en {
+    font-size: 1rem;
+    color: var(--text-sub);
+    display: block;
+    font-style: italic;
+}
+
+/* 7. ナビゲーション（戻るボタン） */
+.back-nav {
+    margin-bottom: 12px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+}
